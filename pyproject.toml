@@ -37,7 +37,8 @@ dev = ["pytest>=7.0.0", "pytest-cov>=4.0.0"]
 all = ["websocket-client>=1.0.0", "gdtoolkit>=4.0.0"]
 
 [project.urls]
-Homepage = "https://github.com/HKUDS/CLI-Anything"
+Homepage = "https://github.com/MaylinXy/cli-anything-godot"
+Repository = "https://github.com/MaylinXy/cli-anything-godot"
 "Built on" = "https://github.com/HKUDS/CLI-Anything"
 
 [project.scripts]

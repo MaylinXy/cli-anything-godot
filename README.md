@@ -40,7 +40,7 @@ GDScript, set up 2D gameplay, export builds — and even mutate a live editor se
 ## Install
 
 ```bash
-git clone https://github.com/<you>/cli-anything-godot.git
+git clone https://github.com/MaylinXy/cli-anything-godot.git
 cd cli-anything-godot
 pip install -e .            # core
 pip install -e ".[all]"    # core + live (websocket-client) + format (gdtoolkit)
