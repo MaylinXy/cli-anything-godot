@@ -1,0 +1,44 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.eggs/
+build/
+dist/
+wheels/
+*.egg
+.installed.cfg
+pip-wheel-metadata/
+
+# Virtual envs
+.venv/
+venv/
+env/
+ENV/
+
+# Test / coverage
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+.tox/
+.cache/
+
+# Editors / OS
+.vscode/
+.idea/
+*.swp
+.DS_Store
+Thumbs.db
+
+# Godot — never commit the import cache or per-machine artifacts.
+# (.import sidecars SHOULD be committed in real projects; here we ship none.)
+.godot/
+*.import
+export_presets.cfg
+build_godot/
+
+# Local scratch / generated test projects
+scratch/
+**/scratch/

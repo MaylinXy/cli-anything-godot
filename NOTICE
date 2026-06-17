@@ -1,0 +1,16 @@
+cli-anything-godot
+Copyright 2026 cli-anything-godot contributors
+
+This product is a community harness built on the CLI-Anything methodology and
+harness conventions created by the HKUDS team.
+
+  CLI-Anything — "Making ALL Software Agent-Native"
+  Copyright HKUDS and contributors
+  https://github.com/HKUDS/CLI-Anything
+  Licensed under the Apache License, Version 2.0.
+
+Portions of the harness layout, the REPL skin (utils/repl_skin.py), the SKILL.md
+format, and the 7-phase GUI-to-CLI methodology derive from CLI-Anything and remain
+under the Apache License, Version 2.0.
+
+This software is licensed under the Apache License, Version 2.0 (see LICENSE).

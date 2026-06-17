@@ -1,0 +1,55 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "cli-anything-godot"
+version = "1.0.0"
+description = "Agent-native CLI for the Godot 4.x engine — offline .tscn/.tres/project.godot editing plus real-time control of a running editor via a WebSocket bridge."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "Apache-2.0" }
+authors = [{ name = "cli-anything-godot contributors" }]
+keywords = ["godot", "gamedev", "cli", "agent", "ai", "automation", "tscn", "editor"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: Apache Software License",
+    "Topic :: Games/Entertainment",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+]
+dependencies = [
+    "click>=8.0.0",
+    "prompt-toolkit>=3.0.0",
+]
+
+[project.optional-dependencies]
+# Real-time editor bridge (the `live` command group) needs a WebSocket client.
+live = ["websocket-client>=1.0.0"]
+# GDScript formatting/linting (`script format` / `script lint`) via gdtoolkit.
+format = ["gdtoolkit>=4.0.0"]
+dev = ["pytest>=7.0.0", "pytest-cov>=4.0.0"]
+all = ["websocket-client>=1.0.0", "gdtoolkit>=4.0.0"]
+
+[project.urls]
+Homepage = "https://github.com/HKUDS/CLI-Anything"
+"Built on" = "https://github.com/HKUDS/CLI-Anything"
+
+[project.scripts]
+cli-anything-godot = "cli_anything.godot.godot_cli:main"
+
+[tool.setuptools.packages.find]
+include = ["cli_anything*"]
+
+[tool.setuptools.package-data]
+# Ship the live-bridge editor addon and the agent SKILL file inside the wheel,
+# so `cli-anything-godot live install` can copy the addon into a target project.
+"cli_anything.godot" = [
+    "skills/*.md",
+    "addons/live_bridge/*",
+]
